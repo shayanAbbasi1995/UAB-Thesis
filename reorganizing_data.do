@@ -1,4 +1,4 @@
-* reorganazing data and doing the regressions of the original paper
+* Reorganizing data and running regressions from the original paper
 
 
 cd "G:\My Drive\UAB UNI\Thesis\Competition\Codes\RMP_DLEU - Market power Jan eeckout code for data replication\data\"

@@ -52,14 +52,14 @@ estimates table m0 m1 m2 m3 m4 m5, star(0.10 .05 .01)
 estimates table m0 m1 m2 m3 m4 m5, se(%7.4f) stat(r2  N)
 
 
-* Multicoliniearity
+* Multicollinearity check
 reg lmu lrestric lrd lad lpen, vce(r)
 vif
 
-* Non-linearity/ov
-ovtest 
+* Non-linearity / omitted variable test
+ovtest
 
-* we had Hetroscedasticity - solved with robust standard errors
+* Heteroskedasticity test (addressed via robust standard errors above)
 reg lmu lrestric lrd lad lpen
 hettest, rhs fstat
 
@@ -70,7 +70,7 @@ twoway (tsline MARKUP10_AGG)
 restore
 
 
-* Robustness with all other markups and the other regultion index
+* Robustness with all other markups and the other regulation index
 preserve
 forvalues i=4/6{
 drop lrestric
